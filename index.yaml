@@ -4,7 +4,7 @@ entries:
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2025-02-15T16:35:02.830832-06:00"
-    description: A Helm chart for Kubernetes
+    description: "A helm chart to deploy my Go API Service."
     digest: dbd043fca152e03df89d35d8f6aa49f0a01cc25bf884a3a6370ad1103ad46336
     name: go-api
     type: application
