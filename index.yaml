@@ -9,6 +9,6 @@ entries:
     name: go-api
     type: application
     urls:
-    - https://github.com/imlogang/go-api-helm/go-api-0.1.0.tgz
+    - https://imlogang.github.io/go-api-helm/go-api-0.1.0.tgz
     version: 0.1.0
 generated: "2025-02-15T16:35:02.829052-06:00"
