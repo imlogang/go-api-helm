@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  go-api:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-02-15T16:35:02.830832-06:00"
+    description: A Helm chart for Kubernetes
+    digest: dbd043fca152e03df89d35d8f6aa49f0a01cc25bf884a3a6370ad1103ad46336
+    name: go-api
+    type: application
+    urls:
+    - https://github.com/imlogang/go-api-helm/go-api-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-02-15T16:35:02.829052-06:00"
