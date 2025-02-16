@@ -25,7 +25,8 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "go-api.selectorLabels" . | nindent 6 }}
+      circleci.com/component-name: "go-api-service"
+      circleci.com/version: {{ .Values.image.tag | quote }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
