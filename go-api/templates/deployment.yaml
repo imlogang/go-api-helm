@@ -11,6 +11,8 @@ metadata:
     circleci.com/pipeline-id: {{ .Values.circleci.pipelineId | quote }}
     circleci.com/workflow-id: {{ .Values.circleci.workflowId | quote }}
     circleci.com/job-number: {{ .Values.circleci.jobNumber | quote }}
+    circleci.com/component-name: "go-api-service"
+    circleci.com/version: {{ .Values.image.tag | quote }}
     circleci.com/restore-version-enabled: true
     circleci.com/scale-component-enabled: true
     circleci.com/restart-component-enabled: true
@@ -31,10 +33,8 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "go-api.labels" . | nindent 8 }}
-        {{- with .Values.podLabels }}
-        {{- toYaml . | nindent 8 }}
-        {{- end }}
+        circleci.com/component-name: "go-api-service"
+        circleci.com/version: {{ .Values.image.tag | quote }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
