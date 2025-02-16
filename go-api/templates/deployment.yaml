@@ -13,12 +13,12 @@ metadata:
     circleci.com/job-number: {{ .Values.circleci.jobNumber | quote }}
     circleci.com/component-name: "go-api-service"
     circleci.com/version: {{ .Values.image.tag | quote }}
-    circleci.com/restore-version-enabled: true
-    circleci.com/scale-component-enabled: true
-    circleci.com/restart-component-enabled: true
-    circleci.com/retry-release-enabled: true
-    circleci.com/promote-release-enabled: true
-    circleci.com/cancel-release-enabled: true
+    circleci.com/restore-version-enabled: "true"
+    circleci.com/scale-component-enabled: "true"
+    circleci.com/restart-component-enabled: "true"
+    circleci.com/retry-release-enabled: "true"
+    circleci.com/promote-release-enabled: "true"
+    circleci.com/cancel-release-enabled: "true"
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
