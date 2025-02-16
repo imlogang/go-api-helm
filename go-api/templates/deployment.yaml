@@ -26,7 +26,6 @@ spec:
   selector:
     matchLabels:
       circleci.com/component-name: "go-api-service"
-      circleci.com/version: {{ .Values.image.tag | quote }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
