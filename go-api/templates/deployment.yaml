@@ -35,6 +35,8 @@ spec:
       labels:
         circleci.com/component-name: "go-api-service"
         circleci.com/version: {{ .Values.image.tag | quote }}
+        app.kubernetes.io/instance: go-api-service
+        app.kubernetes.io/name: go-api-service
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
