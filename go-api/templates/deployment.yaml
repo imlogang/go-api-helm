@@ -5,6 +5,8 @@ metadata:
   labels:
     app: go-api-service
     version: {{ .Values.image.tag }}
+    circleci.com/component-name: "go-api-service"
+    circleci.com/version: {{ .Values.image.tag | quote }}
   annotations:
     circleci.com/project-id: {{ .Values.circleci.project_id | quote }}
     circleci.com/helm-revision-number: {{ .Release.Revision | quote }}
