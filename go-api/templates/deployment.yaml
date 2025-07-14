@@ -79,6 +79,11 @@ spec:
                 secretKeyRef:
                   name: {{ .Values.postgresql.secretName }}
                   key: postgres-password
+            - name: HC_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName }}
+                  key: HC_TOKEN 
             - name: POSTGRES_DB
               value: {{ .Values.postgresql.postgresqlDatabase }}
           ports:
