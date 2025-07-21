@@ -15,5 +15,9 @@ spec:
       targetPort: {{ .Values.service.internalPort }} 
       protocol: TCP
       name: internal
+    - port: {{ .Values.service.healthPort }}
+      targetPort: {{ .Values.service.healthPort }}
+      protocol: TCP
+      name: healthcheck
   selector:
     {{- include "go-api.selectorLabels" . | nindent 4 }}
