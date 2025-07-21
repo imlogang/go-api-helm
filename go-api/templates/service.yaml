@@ -8,8 +8,12 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: {{ .Values.service.port }}
       protocol: TCP
       name: http
+    - port: {{ .Values.service.internalPort }}
+      targetPort: {{ .Values.service.internalPort }} 
+      protocol: TCP
+      name: internal
   selector:
     {{- include "go-api.selectorLabels" . | nindent 4 }}
