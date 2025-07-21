@@ -97,14 +97,14 @@ livenessProbe:
   httpGet:
     path: /live
     port: 8081
-  initialDelaySeconds: 5 
+  initialDelaySeconds: 30
   periodSeconds: 10 
   failureThreshold: 3 
 readinessProbe:
   httpGet:
     path: /ready
     port: 8081
-  initialDelaySeconds: 5 
+  initialDelaySeconds: 30
   periodSeconds: 10 
   failureThreshold: 3 
 
